@@ -1,6 +1,14 @@
-import 'assets/styles/globals.css'
-import type { AppProps } from 'next/app'
+import Layout from "@/components/Layout";
+import { Container, Paper } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import type { AppProps } from "next/app";
+import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
